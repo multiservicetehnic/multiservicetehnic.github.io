@@ -8,23 +8,25 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       background-image: url("mst.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       font-family: Arial, sans-serif;
+      display: flex;
+      align-items: flex-start; /* sus pe desktop */
+      justify-content: flex-start;
     }
 
     .content {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
       padding: 20px 30px;
       border-radius: 12px;
-      color: white;
-      max-width: 400px;
+      margin: 30px;
+      max-width: 90%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 
     h1 {
@@ -34,7 +36,30 @@
 
     p {
       font-size: 16px;
-      margin: 0;
+      margin: 0 0 5px;
+    }
+
+    /* 🧪 Adaptare pentru mobil */
+    @media (max-width: 768px) {
+      body {
+        align-items: center; /* pe mobil centrat */
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .content {
+        margin: 0;
+        padding: 15px 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -47,6 +72,5 @@
   </div>
 </body>
 </html>
-
 
 <!-- trigger redeploy -->
