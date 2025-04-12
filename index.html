@@ -15,7 +15,7 @@
       background-position: center;
       font-family: Arial, sans-serif;
       display: flex;
-      align-items: flex-start; /* sus pe desktop */
+      align-items: flex-start; /* text sus pe desktop */
       justify-content: flex-start;
     }
 
@@ -39,12 +39,16 @@
       margin: 0 0 5px;
     }
 
-    /* 🧪 Adaptare pentru mobil */
+    /* 🧪 Stil pentru mobil */
     @media (max-width: 768px) {
       body {
-        align-items: center; /* pe mobil centrat */
-        justify-content: center;
-        padding: 20px;
+        background-size: contain; /* să nu mai fie zoom pe imagine */
+        background-repeat: no-repeat;
+        background-position: center top;
+        flex-direction: column;
+        align-items: center;      /* centrat pe orizontală */
+        justify-content: flex-start; /* text sus */
+        padding-top: 30px;
         text-align: center;
       }
 
